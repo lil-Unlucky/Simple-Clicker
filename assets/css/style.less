@@ -1,0 +1,168 @@
+:root {
+    // WINDOWS SETTINGS
+    // GENERAL WINDOWS SETTINGS
+    --game-window-width: 550px;
+    --game-window-height: 350px;
+    --game-window-background-color: whitesmoke;
+    --game-window-border-radius: 10px;
+    --inner-game-window-padding: 5px;
+
+    // BACKGROUND COLOR
+    --body-background-color: rgba(0, 100, 0, 0.7);
+    --item-back-color: rgb(180, 180, 180);
+
+    // BUTTONS
+    // BUTTONS -> SPECIAL UPGRADES
+
+    --spec-back: rgba(104, 55, 195, 0.65);
+    --spec-already-have-back: rgba(80, 80, 80, 0.65);
+    // BUTTONS -> SPECIAL UPGRADES -> HOVER
+    --spec-back-hover: rgba(104, 55, 195, 0.8);
+    --spec-already-have-back-hover: rgba(80, 80, 80, 0.8);
+}
+
+// STYLES RESET
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: var(--body-background-color);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 150px;
+}
+
+// GENERAL GAME WINDOW STYLE
+
+.game__window {
+    margin-top: 5%;
+    padding: var(--inner-game-window-padding);
+    width: var(--game-window-width);
+    height: var(--game-window-height);
+    background-color: var(--game-window-background-color);
+    border-radius: var(--game-window-border-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-right: 50px;
+}
+
+// ALL WINDOWS DEFAULT STYLES
+.buttons__layout,
+.ui {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: row;
+}
+
+// UI STYLE
+.ui__span {
+    font-size: 18px;
+    font-family: monospace;
+    text-align: center;
+}
+
+// BUTTONS STYLE
+.btn {
+    cursor: pointer;
+    width: 125px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button__text {
+    color: rgb(35, 35, 35);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.buy__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 64px;
+    border-radius: 0 6px 6px 0;
+}
+
+.buy__button.buy {
+    background-color: var(--spec-back);
+}
+.buy__button.already_have {
+    background-color: var(--spec-already-have-back);
+}
+
+.buy__button.buy:hover{
+    background-color: var(--spec-back-hover);
+    transition: .3s;
+}
+.buy__button.already_have:hover{
+    background-color: var(--spec-already-have-back-hover);
+    transition: .3s;
+}
+
+.click__button {
+    background-color: rgba(255, 165, 0, 0.75);
+    color: rgb(69, 69, 69);
+}
+.click__button:hover {
+    background-color: rgba(255, 180, 0, 0.85);
+    color: rgb(49, 49, 49);
+    transition: .3s;
+}
+
+.upgrade__button {
+    background-color: rgba(165, 42, 42, 0.75);
+}
+.upgrade__button:hover {
+    background-color: rgba(165, 56, 42, 0.85);
+    transition: .3s;
+}
+
+// SPECIAL UPGRADE STYLE
+
+.special__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+
+    
+    & svg {
+        margin-right: 15px;
+    }
+}
+
+.special__upgrade_item {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    align-items: center;
+    text-align: center;
+    background-color: var(--item-back-color);
+
+    & .upgrade__ico {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}
